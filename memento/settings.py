@@ -131,7 +131,6 @@ STATIC_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'static')
 STATIC_FILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles')
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
 MEDIA_URL = '/media/'
