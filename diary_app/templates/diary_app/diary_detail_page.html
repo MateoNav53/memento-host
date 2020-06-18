@@ -1,0 +1,15 @@
+{% extends "diary_app/template.html" %}
+
+{% block content %}
+<div class="container">
+    <div>
+        <h1 class="diary-detail-item col-12">{{ title }}</h1>
+        <div class="diary-detail-item col-8"><em>{{ date }}</em></div>
+        {% if image %}
+            <img class="diary-detail-item detail-image col-8 offset-md-2" src="{{ image.url }}" alt="{{ title }}" />
+        {% endif %}
+        <div class="diary-detail-item col-12">{{ content }}</div>
+    </div>
+</div>
+
+{% endblock %}

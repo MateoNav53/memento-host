@@ -1,0 +1,29 @@
+{% extends "diary_app/template.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block head_title %} New Diary {% endblock %}
+
+{% block content %}
+  
+  <h1 class="text-center new-diary-header">Create New Diary</h1>
+  <form action="/diary/new_diary/" method="POST" class="form-container" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="col-md-8 mx-auto">
+      <div class="form-item">
+        {{ form.title|as_crispy_field }}
+      </div>
+      <div class="form-item">
+        {{ form.content|as_crispy_field }}
+      </div>
+      <div class="form-item col-md-4 col-4">
+        {{ form.image|as_crispy_field }}
+      </div>
+      <button type="submit" class="form-item btn btn-success col-md-3 col-4 offset-md-1">Publish</button>
+    </div>
+
+  </form>
+
+{% endblock %}
+        
+    
