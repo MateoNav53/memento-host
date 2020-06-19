@@ -27,7 +27,7 @@ SECRET_KEY = ["ami=tl(im+22kfc4v&7a1q$-!!9(hdqqgi#&nyukp745!t&#8="]
 #  os.environ.get('MEMENTO_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['memento-diary.herokuapp.com', '127.0.0.1']
 
