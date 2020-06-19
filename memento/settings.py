@@ -136,5 +136,5 @@ STATIC_FILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles')
 ]
 
-MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
+MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media', 'memento-diary.herokuapp.com')
 MEDIA_URL = '/media/'
