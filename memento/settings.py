@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'diary_app',
     'crispy_forms',
+    'storages',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,7 +137,16 @@ STATIC_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'static')
 STATIC_FILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles')
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media', 'memento-diary.herokuapp.com')
 MEDIA_URL = '/media/'
+
+#S3 BUCKETS CONFIG
+AWS_ACCESS_KEY_ID = 'AKIAZYQD3ZDQFSI6NG4B'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'memento-diary'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
