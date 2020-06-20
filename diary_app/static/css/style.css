@@ -36,10 +36,10 @@
 }
 
 .fade-in-1 {
-    animation: FadeIn 3.5s;
+    animation: FadeIn 1s;
 }
 .fade-in-2 {
-    animation: FadeIn 7s;
+    animation: FadeIn 2s;
 }
 
 .new-diary-header {
